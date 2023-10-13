@@ -18,9 +18,36 @@ jobs:
           name: "Say hello"
           command: "echo Hello, World!"
 
+  frontend-build-test:
+    docker:
+      - image: cimg/node:lts
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+            - node-v1-{{ checksum "package-lock.json" }}
+
+      - run:
+          name: Install dependencies
+          command: npm ci
+
+      - save_cache:
+          key: node-v1-{{ checksum "package-lock.json" }}
+          paths:
+            - ~/.npm
+
+      - run:
+          name: Run linter
+          command: npm run lint
+
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
 workflows:
   say-hello-workflow:
     jobs:
       - say-hello
+
+  frontend-build-test-workflow:
+    jobs:
+      - frontend-build-test
