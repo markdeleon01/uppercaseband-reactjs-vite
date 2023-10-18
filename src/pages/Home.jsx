@@ -1,6 +1,15 @@
 import './Home.css'
+import { useEffect } from 'react'
+import NProgress from 'nprogress'
 
 function Home() {
+	NProgress.start()
+
+	// useEffect hook is called after React updates the DOM
+	useEffect(() => {
+		NProgress.done()
+	})
+
 	return (
 		<div data-testid='home' className='home'>
 			<h1 data-testid='home-header-1'>U P P E R C A S E</h1>
