@@ -1,6 +1,6 @@
 const getMembers = async function() {
     const response = await fetch(
-        'https://my-json-server.typicode.com/markdeleon01/uppercaseband-reactjs/members'
+        'https://my-json-server.typicode.com/markdeleon01/uppercaseband-reactjs-vite/members'
     )
     const resData = await response.json()
     return resData

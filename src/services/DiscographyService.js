@@ -1,6 +1,6 @@
 const getDiscography = async function() {
     const response = await fetch(
-        'https://my-json-server.typicode.com/markdeleon01/uppercaseband-reactjs/discography'
+        'https://my-json-server.typicode.com/markdeleon01/uppercaseband-reactjs-vite/discography'
     )
     const resData = await response.json()
     return resData
