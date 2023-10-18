@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
 import NavBar from './NavBar'
 
-describe('NavBar test', () => {
+describe('NavBar', () => {
     test('should render', () => {
         render(<NavBar />, { wrapper: MemoryRouter })
 
