@@ -28,6 +28,14 @@ jobs:
           name: Run linter
           command: npm run lint
 
+      - run:
+          name: Run tests
+          command: npm run test
+
+      - run:
+          name: Run coverage
+          command: npm run coverage
+
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
 workflows:
