@@ -36,6 +36,11 @@ jobs:
           name: Run coverage
           command: npm run coverage
 
+      - run:
+          name: Istanbul coverage badges
+          command: |
+            npm run make-badges:ci
+
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
 workflows:
