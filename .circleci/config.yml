@@ -44,7 +44,7 @@ jobs:
       - run:
           name: Run Cypress Tests
           command: |
-            npm run cy:run-unit && npm run cy:e2e
+            npm run cy:run-unit
 
       - run:
           name: Create Istanbul coverage badges
@@ -57,3 +57,7 @@ workflows:
   frontend-build-test-workflow:
     jobs:
       - frontend-build-test
+    - cypress/run:
+        start-command: 'npm run start'
+        cypress-command: 'npx cypress run --parallel --record  --key e398a217-53a3-4229-8859-aedab251f257 --group all tests'
+        parallelism: 5
