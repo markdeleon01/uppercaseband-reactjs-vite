@@ -14,15 +14,16 @@ function EventListing(props) {
 	}
 
 	return (
-		<div className='event-item'>
-			<span className='event-title'>{event.title}</span>
+		<div data-testid='event-item' className='event-item'>
+			<span data-testid='event-title' className='event-title'>{event.title}</span>
 			<br />
-			<span className='event-date'>{formatDate(event.date)}</span>
+			<span data-testid='event-date' className='event-date'>{formatDate(event.date)}</span>
 			<br />
-			<span className='event-location'>{event.location}</span>
+			<span data-testid='event-location' className='event-location'>{event.location}</span>
 			<br />
-			<span className='event-content'>{ReactHtmlParser(event.content)}</span>
+			<span data-testid='event-content' className='event-content'>{ReactHtmlParser(event.content)}</span>
 			<a
+                data-testid='event-url' 
 				className='event-url'
 				href={event.externalUrl}
 				target='_blank'

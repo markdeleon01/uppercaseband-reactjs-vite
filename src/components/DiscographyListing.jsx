@@ -17,18 +17,20 @@ function DiscographyListing(props) {
 	}
 
 	return (
-		<p className='release-item'>
+		<p data-testid='release-item' className='release-item'>
 			<img
+                data-testid='release-thumbnail' 
 				alt={release.imageUrl}
 				className='release-thumbnail'
 				src={'/' + release.imageUrl}
 			/>
 			<br />
-			<span className='release-title'>{release.title}</span>
+			<span data-testid='release-title' className='release-title'>{release.title}</span>
 			<br />
-			<span className='release-date'>Released: {formattedDate(release)}</span>
+			<span data-testid='release-date' className='release-date'>Released: {formattedDate(release)}</span>
 			<br />
 			<a
+                data-testid='release-url' 
 				className='release-url'
 				href={release.spotifyUrl}
 				target='_blank'
