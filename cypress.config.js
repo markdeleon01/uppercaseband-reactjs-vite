@@ -1,14 +1,19 @@
-import { defineConfig } from "cypress";
+import { defineConfig } from 'cypress'
 
 export default defineConfig({
-  e2e: {
-    baseUrl: "http://localhost:4173",
-  },
+	env: {
+		codeCoverage: {
+			include: 'cypress/**/*.*'
+		}
+	},
+	e2e: {
+		baseUrl: 'http://localhost:3000'
+	},
 
-  component: {
-    devServer: {
-      framework: "react",
-      bundler: "vite",
-    }
-  },
-});
+	component: {
+		devServer: {
+			framework: 'react',
+			bundler: 'vite'
+		}
+	}
+})

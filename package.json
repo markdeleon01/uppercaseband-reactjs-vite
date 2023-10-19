@@ -4,15 +4,18 @@
 	"version": "0.0.0",
 	"type": "module",
 	"scripts": {
+		"start": "vite",
 		"dev": "vite",
 		"build": "vite build",
 		"lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
 		"preview": "vite preview",
 		"test": "vitest --run --passWithNoTests",
 		"coverage": "vitest run --coverage",
-		"test:component": "npx cypress run --headless --component",
-		"test:e2e": "npx cypress run --headless --e2e",
-		"test:ci": "start-server-and-test preview http://localhost:4173 test:e2e",
+		"cy:open-unit": "cypress open --component --browser chrome",
+		"cy:open-e2e": "cypress open --e2e --browser chrome",
+		"cy:run-unit": "cypress run --component --headless",
+		"cy:run-e2e": "cypress run --e2e --headless",
+		"cy:e2e": "start-server-and-test start http-get://localhost:3000 cy:run-e2e",
 		"install:xvfb": "sudo apt-get update && sudo apt-get install libgtk2.0-0 && sudo apt-get install libgtk-3-0 && sudo apt-get install libgbm-dev && sudo apt-get install libnotify-dev && sudo apt-get install libgconf-2-4 && sudo apt-get install libnss3 && sudo apt-get install libxss1 && sudo apt-get install libasound2 && sudo apt-get install libxtst6 && sudo apt-get install xauth && sudo apt-get install xvfb",
 		"make-badges": "istanbul-badges-readme",
 		"make-badges:ci": "npm run make-badges -- --ci"
@@ -29,6 +32,7 @@
 		"redux-mock-store": "^1.5.4"
 	},
 	"devDependencies": {
+		"@cypress/code-coverage": "^3.12.4",
 		"@testing-library/react": "^14.0.0",
 		"@types/react": "^18.2.15",
 		"@types/react-dom": "^18.2.7",
@@ -46,6 +50,7 @@
 		"jsdom": "^22.1.0",
 		"start-server-and-test": "^2.0.1",
 		"vite": "^4.4.5",
+		"vite-plugin-istanbul": "^5.0.0",
 		"vitest": "^0.34.6"
 	}
 }

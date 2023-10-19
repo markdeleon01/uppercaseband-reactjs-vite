@@ -44,7 +44,7 @@ jobs:
       - run:
           name: Run Cypress Tests
           command: |
-            npm run test:component && npm run test:ci
+            npm run cy:run-unit && npm run cy:e2e
 
       - run:
           name: Create Istanbul coverage badges
