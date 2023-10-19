@@ -12,6 +12,9 @@ As a matter of interest and passion for JavaScript and music in general, I creat
 
 This project was bootstrapped with [Vite](https://www.npmjs.com/package/create-vite), and tested with [Vitest](https://vitest.dev/guide/).
 
+The live site can be found on:  https://uppercaseband-reactjs-vite.onrender.com
+
+
 ## Project setup
 
 1.  Install NodeJS on your local machine
