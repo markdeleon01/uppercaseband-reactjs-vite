@@ -37,6 +37,11 @@ jobs:
           command: npm run coverage
 
       - run:
+          name: Install Xvfb - Cypress required dependency
+          command: |
+            npm run install:xvfb
+
+      - run:
           name: Run Cypress Tests
           command: |
             npm run test:component && npm run test:ci
