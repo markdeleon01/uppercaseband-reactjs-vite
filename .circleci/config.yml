@@ -29,15 +29,25 @@ jobs:
           command: npm run lint
 
       - run:
-          name: Run tests
+          name: Run unit tests
           command: npm run test
 
       - run:
-          name: Run coverage
+          name: Run tests coverage
           command: npm run coverage
 
       - run:
-          name: Istanbul coverage badges
+          name: Install Xvfb - Cypress required dependency
+          command: |
+            npm run install:xvfb
+
+      - run:
+          name: Run Cypress Tests
+          command: |
+            npm run cy:run-unit && npm run cy:e2e
+
+      - run:
+          name: Create Istanbul coverage badges
           command: |
             npm run make-badges:ci
 
