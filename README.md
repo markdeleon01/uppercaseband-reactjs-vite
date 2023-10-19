@@ -12,6 +12,55 @@ As a matter of interest and passion for JavaScript and music in general, I creat
 
 This project was bootstrapped with [Vite](https://www.npmjs.com/package/create-vite), and tested with [Vitest](https://vitest.dev/guide/).
 
+## Project setup
+
+1.  Install NodeJS on your local machine
+2.  Clone this project repository
+3.  Navigate to the project folder and install
+
+```sh
+npm install --force
+```
+
+4.  Install JSON Server to simulate a backend REST service to deliver data in JSON format to the front-end application
+
+```
+npm install -g json-server
+```
+
+5.  JSON Server will use the _db.json_ file in the project folder to serve mock data as defined in the file
+6.  Run the mock API server
+
+```
+json-server --port 8080 --watch db.json
+```
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+The page will reload when you make changes.\
+
+### `npm run lint`
+You may also see any lint errors in the console.
+
+### `npm test`
+
+Launches the test runner.
+
+### `npm run build`
+
+Builds the app for production to the `dist` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
 ### Disclaimer
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
