@@ -44,16 +44,13 @@ jobs:
       - run:
           name: Run Cypress Tests
           command: |
-            npm run cy:run-unit
+            npm run cy:run-unit && npm run cy:e2e
 
       - run:
           name: Create Istanbul coverage badges
           command: |
             npm run make-badges:ci
-    - cypress/run:
-        start-command: 'npm run start'
-        cypress-command: 'npx cypress run --parallel --record  --key e398a217-53a3-4229-8859-aedab251f257 --group all tests'
-        parallelism: 5
+
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
 workflows:
