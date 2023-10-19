@@ -53,6 +53,10 @@ You may also see any lint errors in the console.
 
 Launches the test runner.
 
+### `npm run coverage`
+
+Performs test coverage.
+
 ### `npm run build`
 
 Builds the app for production to the `dist` folder.\
