@@ -29,15 +29,20 @@ jobs:
           command: npm run lint
 
       - run:
-          name: Run tests
+          name: Run unit tests
           command: npm run test
 
       - run:
-          name: Run coverage
+          name: Run tests coverage
           command: npm run coverage
 
       - run:
-          name: Istanbul coverage badges
+          name: Run Cypress Tests
+          command: |
+            npm run test:component && npm run test:ci
+
+      - run:
+          name: Create Istanbul coverage badges
           command: |
             npm run make-badges:ci
 
