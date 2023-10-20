@@ -6,6 +6,8 @@ import store from './store/index'
 import App from './App.jsx'
 import './index.css'
 
+import 'nprogress/nprogress.css'
+
 ReactDOM.createRoot(document.getElementById('root')).render(
 	<React.StrictMode>
 		<Provider store={store}>
