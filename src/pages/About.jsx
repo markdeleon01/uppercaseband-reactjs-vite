@@ -38,15 +38,6 @@ function About() {
 			</p>
 			<div data-testid='biography' className='biography'>
 				<p>
-					Formed in 2009, UPPERCASE is a Filipino-Canadian alternative pop rock
-					indie band from Toronto, Canada pursuing Original Pilipino Music
-					(OPM).
-				</p>
-				<p>
-					Composed of Mark de Leon (vocals/guitars), Allan Lagat (bass), Joey
-					Giagonia (lead guitars), and Kyle Andre (drums).
-				</p>
-				<p>
 					In 2013 the band released their debut album entitled &quot;<i>Time Space Warp</i>&quot;, and their first single &quot;<i>Balikbayan</i>&quot; caught the attention of Filipino online radio stations in the UK,
 					Dubai, Manila and Toronto. They were unanimously voted &quot;<b>Top Band</b>&quot; at the 2013 Filipinos Making Waves Festival held at Dundas Square in downtown Toronto, winning over judges with their hit
 					single &quot;<i>Ere</i>&quot;.
