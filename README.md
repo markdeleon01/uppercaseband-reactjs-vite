@@ -6,7 +6,7 @@
 **Code unit test coverage:**
 | Statements                  | Branches                | Functions                 | Lines             |
 | --------------------------- | ----------------------- | ------------------------- | ----------------- |
-| ![Statements](https://img.shields.io/badge/statements-78.02%25-red.svg?style=flat) | ![Branches](https://img.shields.io/badge/branches-81.81%25-yellow.svg?style=flat) | ![Functions](https://img.shields.io/badge/functions-67.5%25-red.svg?style=flat) | ![Lines](https://img.shields.io/badge/lines-77.27%25-red.svg?style=flat) |
+| ![Statements](https://img.shields.io/badge/statements-81.31%25-yellow.svg?style=flat) | ![Branches](https://img.shields.io/badge/branches-100%25-brightgreen.svg?style=flat) | ![Functions](https://img.shields.io/badge/functions-75%25-red.svg?style=flat) | ![Lines](https://img.shields.io/badge/lines-80.68%25-yellow.svg?style=flat) |
 
 As a matter of interest and passion for JavaScript and music in general, I created a ReactJS web application for my band UPPERCASE.
 

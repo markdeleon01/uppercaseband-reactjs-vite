@@ -19,6 +19,7 @@ export default defineConfig({
     globals: true,
     environment: 'jsdom',
     coverage: {
+      enabled: true,
       exclude: [
         'coverage/**',
         'dist/**',
@@ -36,7 +37,7 @@ export default defineConfig({
         '**/vitest.{workspace,projects}.[jt]s?(on)',
         '**/.{eslint,mocha,prettier}rc.{?(c|m)js,yml}'
       ],
-      reporter: 'json-summary',
+      reporter: ['json-summary', 'html'],
       provider: 'istanbul'
     }
   }
