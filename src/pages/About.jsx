@@ -26,7 +26,7 @@ function About() {
 			<h2 data-testid='about-header-2'>Band Members</h2>
 			{members &&
 				members.map((member) => (
-					<p className='member-item' key={member.name}>
+					<p data-testid='member-item' className='member-item' key={member.name}>
 						<span>
 							{member.name} - {member.role}
 						</span>
