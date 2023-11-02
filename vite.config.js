@@ -19,7 +19,6 @@ export default defineConfig({
     globals: true,
     environment: 'jsdom',
     coverage: {
-      enabled: true,
       exclude: [
         'coverage/**',
         'dist/**',
