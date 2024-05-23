@@ -1,17 +1,9 @@
 import './EventListing.css'
+import { formatDate } from '../utils/dateFormatter'
 import ReactHtmlParser from 'react-html-parser'
 
 function EventListing(props) {
 	const event = props.event
-
-	const formatDate = function (value) {
-		const date = new Date(value)
-		return date.toLocaleString(['en-US'], {
-			month: 'long',
-			day: 'numeric',
-			year: 'numeric'
-		})
-	}
 
 	return (
 		<div data-testid='event-item' className='event-item'>
