@@ -1,20 +1,8 @@
 import './DiscographyListing.css'
+import { formatDate } from '../utils/dateFormatter'
 
 function DiscographyListing(props) {
 	const release = props.release
-
-	const formatDate = function (value) {
-		const date = new Date(value)
-		return date.toLocaleString(['en-US'], {
-			month: 'long',
-			day: 'numeric',
-			year: 'numeric'
-		})
-	}
-
-	const formattedDate = function (release) {
-		return formatDate(release.releaseDate)
-	}
 
 	return (
 		<p data-testid='release-item' className='release-item'>
@@ -27,7 +15,7 @@ function DiscographyListing(props) {
 			<br />
 			<span data-testid='release-title' className='release-title'>{release.title}</span>
 			<br />
-			<span data-testid='release-date' className='release-date'>Released: {formattedDate(release)}</span>
+			<span data-testid='release-date' className='release-date'>Released: {formatDate(release.releaseDate)}</span>
 			<br />
 			<a
                 data-testid='release-url' 
